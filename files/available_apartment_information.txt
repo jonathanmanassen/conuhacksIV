@@ -1,0 +1,19 @@
+#id:smoker:pet:location:size:price:features:address
+#1001:yes:dogs:downtown:4:Less than 500:fireplace:7328 Ste. Catherine Street - Apt#1294
+#1002:yes:dogs:downtown:4:Less than 500:laundromat:987 St. Joseph Street - Apt#124
+#1003:yes:dogs:downtown:4:Less than 500:fireplace laundromat parking pool:3127 Metcalfe Street - Apt#164
+#1004:no:dogs:downtown:1:Less than 500:fireplace laundromat pool:7328 Ste. Catherine Street - Apt#1294
+#1005:yes:dogs:downtown:3:Less than 500:fireplace laundromat parking balcony pool:365 Marroni Avenue - Apt#245
+#1006:yes:dogs:downtown:3:Less than 300:fireplace laundromat parking balcony pool:4367 De La Montagne - Apt#301
+#1007:no:dogs:downtown:4:Less than 500:fireplace parking balcony pool:365 Prince Arthur Street - Apt#1569
+#1008:yes:dogs:downtown:5:Less than 800:fireplace laundromat parking balcony pool:1230 Milton Street - Apt#2343
+#1009:no:dogs:downtown:5:Less than 800:fireplace laundromat parking balcony pool:1675 McTavish Street - Apt#345 
+#1010:yes:dogs:downtown:5:Less than 1200:fireplace laundromat parking balcony pool:1345 Peel Street - Apt#583 
+#1011:yes:dogs:downtown:6:Above 1200:fireplace laundromat balcony pool:999 De Maissoneuve Boulevard - Apt#1200
+#1012:yes:dogs:ndg:1:Less than 500:fireplace laundromat parking balcony pool:6505 Sherbrooke West, Apt#1001
+#1013:yes:dogs:west island:3:Less than 500:fireplace:1222 Dundas Street - Apt# 6505
+#1014:yes:dogs:west island:4:Less than 500:laundromat:1223 Dundas Street - Apt# 6504
+#1015:yes:dogs:west island:3:Less than 500:fireplace laundromat parking balcony pool:1224 Dundas Street - Apt# 6509
+#1016:yes:dogs:lower westmount:3:Less than 500:fireplace laundromat parking balcony pool:1050 Sherbrooke - Apt#898
+#1017:yes:dogs:east end:3:Less than 500:fireplace laundromat parking balcony pool:1002 Sherbrooke East - Apt#010
+#1018:yes:dogs:downtown:4:Less than 500:parking:738 St. Mary Street - Apt#1294

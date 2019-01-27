@@ -1,0 +1,133 @@
+<html>
+<head class ="head">
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>EnVille</title>
+	<link href="css/test.css" type="text/css" rel="stylesheet">
+	<link href="css/search.css" type="text/css" rel="stylesheet">
+	<link href="css/test.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet">
+	<script src="js/test.js" type="text/javascript"></script>
+	
+</head>
+
+<body class="body">
+
+    <div class="container">
+    
+        <header class="header">
+			<img src="images/logo_enville.PNG" class="logo" width="200" height="70">
+			<p class="user-right">Log Out</p>	
+			<p class="user-left">Sign In</p>
+		</header>
+
+		<figure>
+				<img src="images/city_edit_2.PNG" class="fill">
+			</figure>
+
+            <nav>
+                <ul>
+                    <li class="border"><a href="index.html" >Welcome</a></li>
+					<li class=border><a href="recreation.html" class="currentpage">Recreation</a></li>
+					<li class=border><a href="culture.html">Culture</a></li>
+                    <li class="border"><a href="mentorship.html">Mentorship</a></li>
+                </ul>
+            </nav>
+
+		<main class="mainculture">
+
+            <h1 class="title">Upcoming Events</h1>
+        </br>
+            <p class="sixteen">Look for your favorites events in English or French</p>
+        </br>
+		<div class="s003">
+			<form>
+			  <div class="inner-form">
+				<div class="input-field first-wrap">
+				  <div class="input-select">
+					<select data-trigger="" name="choices-single-defaul">
+					  <option placeholder="">Cities</option>
+					  <option>Montreal</option>
+					  <option>Drummondville</option>
+					  <option>Quebec City</option>
+					</select>
+				  </div>
+				</div>
+				<div class="input-field second-wrap">
+				  <input id="search" type="text" placeholder="Enter keywords for specifc events" />
+				</div>
+				<div class="input-field third-wrap">
+				  <button class="btn-search" type="button">
+					<svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+					  <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+					</svg>
+				  </button>
+				</div>
+			  </div>
+			</form>
+		  </div>
+		  <script src="js/choices.js"></script>
+		  <script>
+			const choices = new Choices('[data-trigger]',
+			{
+			  searchEnabled: false,
+			  itemSelectText: '',
+			});
+	  
+		  </script>
+
+		<div class="eventcontent">
+			
+		</br></br>
+			<div id="events"></div>
+
+			<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+			<script>
+				$(document).ready(function() {
+				//anon oauth token
+				var token = 'JHIXOSQOC7DVUSH7EI7O';
+			
+				var $events = $("#events");
+				
+				$events.html("<i>Loading events, please stand by...</i>");
+				$.get('https://www.eventbriteapi.com/v3/events/search/?token='+token+'&start_date.keyword=today&location.address=montreal&expand=venue', function(res) {
+					if(res.events.length) {
+					var s = "";
+					var HTMLTemplate = "";
+					for(var i=0;i<res.events.length;i++) {
+						var event = res.events[i];
+						HTMLTemplate += `
+						<main class="fix1">
+					
+						</main>
+						<a href="${event.url}" target="_blank"><img class="fix2" src="${event.logo !== null ? event.logo.url : ''}"></a>
+						<h2 class="title">${event.name.text}</h2>
+						<h3>Event Information</h3>
+						<p>${event.description.text !== null ? event.description.text.substring(0, 210) : ''}...</p>
+						<h3>${moment(event.start.local).format('M/D/YYYY h:mm A')}</h3> 
+						<p></br></p>
+						`
+						;
+					};
+					$events.html(HTMLTemplate);
+					} else {
+					$events.html("<p>Sorry, there are no upcoming events.</p>");
+					}
+				});    
+				});
+			</script>
+		</div>
+	</div>
+	
+	</main>
+
+	<footer class="footer">
+
+		<p class="copy">&copy Copyright GJ Digital Media</p>
+	
+		</footer>
+
+</body>
+</html>

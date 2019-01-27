@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+* 
+{
+    box-sizing: border-box;
+}
+
+html, body, input
+{ 
+    margin:0; 
+    padding:0; 
+    height:100%; 
+    width:100%; 
+    font-family: 'Oswald', sans-serif;
+} 
+
+html
+{
+    min-height:100%
+}
+
+body
+{
+    height:100vp;
+}
+
+.header
+{
+    background-color:#14599E;
+}
+
+.user-left
+{
+    float:right;
+    padding:10px;
+    color: #ffffff;
+}
+
+.user-right
+{
+    float:right;
+    padding:10px;
+    margin-right:15px;
+    color: #ffffff;
+}
+
+.section
+{
+    background-image:url("../images/city_edit_2.PNG");
+    background-repeat: no-repeat;
+    padding:250px;
+}
+
+.container{
+    max-width: 100%;
+}
+
+figure
+{
+  bottom:0;
+  margin-left:0;
+  position:absolute;
+  margin-right:0px;
+  top:60px;
+  padding-right:0px;
+  padding-left:0px;
+  min-width:100%;
+}
+
+
+.fill
+{
+    width:100%;
+    max-width:100%;  
+}
+
+.entry img {
+  display:flex;
+  height:auto;
+  min-height:100%;
+  left:50%;
+  position:absolute;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:auto;
+  min-width:100%;
+}
+
+.list
+{
+    background-color:#ffffff;
+    padding-left:15px;
+    padding-right:15px;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+ul 
+{
+    background-color:#ffffff;
+    display:block;
+    list-style:none;
+    text-align:center;
+    padding:0x;
+    margin:0px;
+}
+
+ul li 
+{
+    display:inline-block;
+    text-align:center;
+	width:20%;
+}
+
+ul li a 
+{
+    background-color:#ffffff;
+    display:block;
+    padding-bottom:15px;
+}
+
+
+a{
+    padding-top: 20px;
+    text-decoration:none;
+    color:333366;
+}
+
+
+.border {
+    position:relative;
+}
+
+nav li {
+    font-size:large;
+}
+
+
+.border:hover::after
+{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:0;    
+    left:0;
+    bottom:-12px; /*Change this to increase/decrease distance*/
+    border-bottom:4px solid #ff9966;
+    padding-bottom: 10px;
+}
+
+li .a:active
+{
+  color:#ff9966;
+}
+
+.search
+{
+    background-color:#ffffff;
+    padding-top:20px;
+    padding-left:15px;
+    padding-right:15px;
+    padding:30px;
+}
+
+.main
+{
+    background:#ffffff;
+    text-align:center;
+    margin-top: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
+    overflow:hidden;
+}
+
+.main h1
+{
+    font-size:4em;
+    color: #ff9966;
+}
+
+.main p
+{
+    font-size:2em;
+}
+
+.mainculture
+{
+    background:#ffffff;
+    text-align:center;
+    margin-top: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
+    overflow:hidden;
+}
+
+.mainresident
+{
+    background:#ffffff;
+    text-align:center;
+    margin-top: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
+    overflow:hidden;
+}
+
+
+.column 
+{
+    float: left;
+    width: 50%;
+    margin-left: 15px;
+}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.footer
+{
+    background-color:#14599E;
+    margin-top:50px;
+    padding:30px 15px;
+    color:#ffffff;
+    text-align: vertical;
+    vertical-align: vertical;
+    size: 18pt;
+}
+
+.map
+{
+    height: 500px;
+    width: 100%
+}
+
+
+.search 
+{
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+
+
+}
+
+.eventcontent 
+{
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.fix1
+{
+    float:left;
+    clear:left;
+    padding-bottom:10px;
+}
+
+.fix2
+{
+    margin-right: 20px;
+    float:left;
+    border-top-right-radius:8px; 
+    border-top-left-radius:8px; 
+    border-bottom-left-radius:8px; 
+    border-bottom-right-radius:8px; 
+}
+
+.title {
+    color:#ff9966;
+}
+
+.entry {
+    margin-left:15px;
+    margin-right: 15x;
+}
+
+.white
+{
+    background-color: #fff;
+    width: 100%;
+    text-align:center;
+    height: 300px;
+    vertical-align: center;
+}
+
+.white h1 
+{
+    color: #ff9966;
+}
+
+.white p
+{
+    font-size: 16pt;
+}
+
+.sixteen
+{
+    font-size: 16pt;
+}
+
+
+.currentpage
+{
+    color: #ff9966;
+}
+
+.test
+{
+    vertical-align:center;
+    text-align:center;
+    font-size: 18pt;
+    color:#ffffff;
+}
+
